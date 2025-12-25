@@ -6,11 +6,11 @@ export interface CaloriesRecord {
   id?: number;
   mealName: string;
   calories: number;
-  proteins: number;          // ajouté
-  carbs: number;             // ajouté
-  fat: number;               // ajouté
+  proteins: number;         
+  carbs: number;             
+  fat: number;               
   ocrText: string;
-  recommendations: string;   // ajouté
+  recommendations: string;   
   createdAt: string;
 }
 
@@ -18,7 +18,7 @@ export interface CaloriesRecord {
   providedIn: 'root'
 })
 export class IaCaloriesService {
-  private baseUrl = 'http://localhost:8084/api/calories'; // ton backend IA
+  private baseUrl = 'http://localhost:8084/api/calories'; 
 
   constructor(private http: HttpClient) {}
 
