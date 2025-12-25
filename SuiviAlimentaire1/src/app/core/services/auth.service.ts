@@ -45,7 +45,7 @@ export class AuthService {
     return this.currentUserSubject.value;
   }
 
-  // LOGIN
+  
   login(data: LoginRequest): Observable<HttpResponse<LoginResponse>> {
     return this.http.post<LoginResponse>(
       `${this.apiUrl}/login`,
@@ -70,7 +70,7 @@ export class AuthService {
     );
   }
 
-  // REGISTER
+  
   register(data: RegisterRequest): Observable<string> {
     return this.http.post(
       `${this.apiUrl}/register`,
@@ -84,7 +84,7 @@ export class AuthService {
     );
   }
 
-  // Stockage du token
+
   saveToken(token: string): void {
     localStorage.setItem('token', token);
   }
@@ -108,7 +108,7 @@ export class AuthService {
     return !!this.getToken();
   }
 
-  // Ajoute automatiquement le header Authorization
+  
   getAuthHeaders(): HttpHeaders {
     const token = this.getToken();
     return new HttpHeaders({
