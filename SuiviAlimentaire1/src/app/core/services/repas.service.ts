@@ -18,7 +18,7 @@ export interface CaloriesRecord {
   providedIn: 'root'
 })
 export class CaloriesRecordService {
-  private apiUrl = 'http://localhost:8083/api/calories-history'; // microservice IA
+  private apiUrl = 'http://localhost:8083/api/calories-history'; 
 
   constructor(private http: HttpClient) {}
 
