@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, DatePipe } from '@angular/common'; // pour le pipe date
+import { CommonModule, DatePipe } from '@angular/common'; 
 import { IaCaloriesService, CaloriesRecord } from '../../core/services/ia-calories.service';
 import { JsonToArrayPipe } from '../../core/pipes/json-to-array.pipe';
 
@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class IaCaloriesComponent {
 
-  record: CaloriesRecord | null = null;  // seul le repas envoyé
+  record: CaloriesRecord | null = null;  
   loading = true;
   error = '';
 
