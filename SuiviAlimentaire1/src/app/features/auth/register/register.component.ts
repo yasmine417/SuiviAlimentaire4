@@ -32,7 +32,7 @@ export class RegisterComponent {
           setTimeout(() => this.router.navigate(['/login']), 2000);
         },
         error: (err) => {
-          console.error("Erreur HTTP:", err);  // ← Affiche l’erreur réseau ou CORS
+          console.error("Erreur HTTP:", err);  
           this.errorMessage = err.error || 'Erreur lors de l\'inscription';
           this.successMessage = '';
         }
