@@ -32,7 +32,7 @@ export class OcrComponent {
   }
 
   sendOcr() {
-    // Vérifie qu'il y a soit une image, soit les champs remplis
+   
     if (!this.selectedFile && (!this.mealName || !this.ocrText)) {
       this.error = 'Veuillez sélectionner une image ou remplir le repas et le texte OCR.';
       return;
@@ -42,13 +42,13 @@ export class OcrComponent {
     this.error = '';
 
     if (this.selectedFile) {
-      // 1️⃣ Upload image -> OCR automatique
+     
       this.ocrIaService.uploadImage(this.selectedFile).subscribe({
         next: res => {
           this.mealName = res.mealName;
           this.ocrText = res.ocrText;
 
-          // 2️⃣ Redirection vers la page IA
+          
           this.router.navigate(['/ia-calories'], { state: { mealName: this.mealName, ocrText: this.ocrText } });
           this.loading = false;
         },
@@ -66,7 +66,7 @@ export class OcrComponent {
       }).subscribe({
         next: () => {
 
-          // 🔁 Redirection vers IA Calories
+         
           this.router.navigate(
             ['/ia-calories'],
             { state: { mealName: this.mealName, ocrText: this.ocrText } }
